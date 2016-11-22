@@ -7,7 +7,7 @@ using System.Web.Http;
 
 namespace IA.Controllers
 {
-    [Authorize(Roles = "UserAccountAdministrator")]
+    [Authorize(Roles = "AccountAdministrator")]
     public class AppClaimsController : ApiController
     {
         // Manager reference

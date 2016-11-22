@@ -58,7 +58,7 @@ namespace IA.Controllers
         // Attention - This enables the admin to delete an account
 
         // GET: Maintenance/Delete/user@example.com/
-        [Authorize(Roles = "UserAccountManager")]
+        [Authorize(Roles = "AccountAdministrator")]
         public ActionResult Delete(string userName)
         {
             return View(new UserDelete { UserName = userName });
@@ -66,7 +66,7 @@ namespace IA.Controllers
 
         // POST: Maintenance/Delete?username=user@example.com
         [HttpPost]
-        [Authorize(Roles = "UserAccountManager")]
+        [Authorize(Roles = "AccountAdministrator")]
         public async Task<ActionResult> Delete(string userName, FormCollection collection)
         {
             if (!string.IsNullOrEmpty(userName))

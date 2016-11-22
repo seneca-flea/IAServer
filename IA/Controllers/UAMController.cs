@@ -9,7 +9,7 @@ namespace IA.Controllers
 {
     // UAM = User Account Management
 
-    [Authorize]
+    [Authorize(Roles = "AccountAdministrator")]
     public class UAMController : ApiController
     {
         // Reference
