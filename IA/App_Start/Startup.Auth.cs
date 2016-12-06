@@ -40,6 +40,9 @@ namespace IA
             // Initialize the ASP.NET Identity sign in manager object (which is used elsewhere in the app)
             app.CreatePerOwinContext<ApplicationSignInManager>(ApplicationSignInManager.Create);
 
+            // Configure support for CORS
+            app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
+
             // Initialize user accounts for the app
             IdentityInitialize.LoadUserAccounts();
 
